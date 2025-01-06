@@ -8,9 +8,10 @@
             display: flex;
             width: 100vw;
             justify-content: center;
+            align-items:center;
             position: relative;
             overflow: hidden;
-            height:100vh;
+            height:100vh
         }
         p {
             font-size: 30px;
@@ -35,8 +36,8 @@
         /* Estilo para as novas imagens */
         .nova-imagem {
             position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
+            top: 0%;
+            transform: translateY(0%);
             left: 100%; /* Começa do lado direito da tela */
             animation: adicionarImagem 5s linear infinite;
         }
@@ -56,25 +57,9 @@
 </head>
 <body>
     <div id="animacao">
-        <img src="a.png" alt="">
+        <img src="images__1_-removebg-preview.png" alt="">
         <p>obrigado por tudo</p>
         <p>sempre lembrarei de vocês</p>
     </div>
-
-    <script>
-        // Aguardar o término da animação da div original
-        const div = document.getElementById('animacao');
-
-        div.addEventListener('animationend', function() {
-            // Criar nova imagem e adicionar à página
-            const novaImagem = document.createElement('img');
-            novaImagem.src = 'b.png'; // Caminho para a nova imagem
-            novaImagem.alt = 'Nova imagem';
-            novaImagem.classList.add('nova-imagem');
-            
-            // Adicionar a nova imagem ao corpo da página
-            document.body.appendChild(novaImagem);
-        });
-    </script>
 </body>
 </html>
