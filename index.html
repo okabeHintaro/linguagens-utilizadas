@@ -8,10 +8,10 @@
             display: flex;
             width: 100vw;
             justify-content: center;
-            align-items:center;
+            align-items: center;
             position: relative;
             overflow: hidden;
-            height:100vh
+            height: 100vh;
         }
         p {
             font-size: 30px;
@@ -22,7 +22,11 @@
             top: 50%;
             transform: translateY(-50%);
             animation: mover 5s linear infinite;
-        }
+       }
+       
+       #animacaoo,#animacaooo{
+           display:none;
+       }
 
         @keyframes mover {
             0% {
@@ -39,7 +43,7 @@
             top: 0%;
             transform: translateY(0%);
             left: 100%; /* Começa do lado direito da tela */
-            animation: adicionarImagem 5s linear infinite;
+            animation: adicionarImagem 5s linear 1;
         }
 
         @keyframes adicionarImagem {
@@ -57,9 +61,29 @@
 </head>
 <body>
     <div id="animacao">
-        <img src="images__1_-removebg-preview.png" alt="">
-        <p><b>obrigado por tudo!</b></p>
-        <p><b>sempre lembrarei de vocês!💓💓</b></p>
+        <img id="f" src="images__1_-removebg-preview.png" alt="">
+        <p>obrigado por tudo</p>
+        <p>sempre lembrarei de vocês</p>
     </div>
+    <div id="animacaoo">
+        <img id="f" src="images__2_-removebg-preview.png" alt="">
+        <p>se cuidem!</p>
+        <p>capivaras</p>
+        <p>não olhem</p>
+        <p>atras do espelho do quarto</p>
+    </div>
+    <div id="animacaooo">
+        <img style="height:300px"id="f" src="IMG_20250104_150232198_MFNR.jpg" alt="">
+        <img style="height:300px" src="images (3).jpeg">
+    <script>
+        setTimeout(()=>{document.getElementById("animacao").style.display="none"
+            document.getElementById("animacaoo").style.display="block"
+            },5000)
+            
+            
+            setTimeout(()=>{document.getElementById("animacaoo").style.display="none"
+            document.getElementById("animacaooo").style.display="block"
+            },10000)
+    </script>
 </body>
 </html>
